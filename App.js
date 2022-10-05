@@ -31,6 +31,10 @@ export default function App() {
 		}
 	}, [fontsLoaded]);
 
+	if (!fontsLoaded) {
+		return null;
+	}
+
 	function pickedNumberHandler(pickedNumber) {
 		setUserNumber(pickedNumber);
 		setGameIsOver(false);
